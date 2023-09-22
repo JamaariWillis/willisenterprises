@@ -1,0 +1,1036 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+    background-color: #010103;
+    list-style-type: none;
+    color: #fff;
+    text-shadow: 0px 0px 4px #fff;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); 
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: fixed;
+        background-color: transparent;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding: 10px 0px;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 89vw;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 46px;
+        right: 0px;
+        width: 30%;
+        height: 90px;
+        background-color: #17171700;
+        text-align: center;
+        z-index: 1;
+    }
+
+    menu, li {
+        margin-top: 7px;
+    }
+
+    menu, a {
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Cormorant Garamond', serif;
+       
+    }
+
+    .logo2 {
+      font-size: 30px;
+      text-shadow: 0px 0px 10px #fff;
+      padding-right: 10px;
+      margin-left: 30px;
+      display: none;
+      
+    }
+  
+    .shop {
+      padding-right: 700px;
+    }
+
+
+    .bar {
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+        text-shadow: 0px 0px 10px #fff;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-8px, 3.5px);
+        width: 17px;
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -3.5px);
+        width: 17px;
+    }
+
+    /*Hero Section*/
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url(images/wallpaper.png);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        margin: auto;
+        margin-top: 0px;
+        width: 100%;
+        height: 450px;
+    }
+
+    .logo {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 53px;
+        position: relative;
+        color: #fff;
+        text-shadow: 0px 0px 10px #fff;
+        margin-top: 50px;
+        margin-bottom: 12px;
+    }
+
+
+    .title {
+        font-size: 22px;
+        font-family: 'Cormorant Garamond', serif;
+        margin-top: 0px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #fff;
+        font-weight:400;
+        text-shadow: 0px 0px 10px #fff;
+        line-height: 0;
+    }
+
+    .title2 {
+        font-size: 12px;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: lowercase;
+        color: #fff;
+        text-shadow: 0px 0px 10px #fff;
+        margin-bottom: 20px;
+    }
+
+    a.cta-button {
+        display: flex;
+        background-color: transparent;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 14px !important;
+        border: 1px solid #ffffff86;
+        color: #fff;
+        text-shadow: 0px 0px 10px #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 5px;
+        justify-content: center;
+        justify-self: center;
+        width: 70px;
+        position: relative;
+        margin: auto;
+        margin-top: 0px;
+    }
+    
+    /*Ventures Section*/
+
+    /* Style for the header */
+
+  .ventures {
+    text-align: center;
+  }
+
+  .tech {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style for the content section */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  background-color: #000000a1;
+  padding: 20px 50px;
+  transition: transform 0.3s ease, box-shadow 0.3 ease; /* Add a transition for smooth hover effect */
+}
+
+/* Animation for hover-like effect */
+@keyframes hoverEffect {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(245, 245, 245, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+/* Apply the animation to the rows */
+.row:hover, .row-auto-hover {
+  animation: hoverEffect 5s infinite alternate; /* Adjust the duration as needed */
+}
+
+
+
+
+/* Style for the left box */
+.left-box {
+  flex: 1;
+  background-color: #000000;
+  /* Add styles as needed for your left box */
+}
+
+/* Style for the right box */
+.right-box {
+  flex: 1;
+  padding-bottom: 50px;
+  text-align: center;
+  background-image: url(images/W/6.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-box2 {
+  flex: 1;
+  padding-bottom: 50px;
+  text-align: center;
+  background-image: url(images/W/7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-box3 {
+  flex: 1;
+  padding-bottom: 50px;
+  text-align: center;
+  background-image: url(images/W/5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-box4 {
+  flex: 1;
+  padding-bottom: 50px;
+  text-align: center;
+  background-image: url(images/W/10.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-box5 {
+  flex: 1;
+  padding-bottom: 50px;
+  text-align: center;
+  background-image: url(images/W/11.png);
+    background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-box6 {
+  flex: 1;
+  padding-bottom: 50px;
+  text-align: center;
+  background-image: url(images/W/12.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-box7 {
+  flex: 1;
+  padding-bottom: 50px;
+  text-align: center;
+  background-image: url(images/W/9.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-box p {
+  font-size: 18px;
+}
+
+/* Style for the call to action button */
+.cta-button {
+  margin-top: 70px;
+}
+
+.button {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+      
+ 
+      
+      /* Footer Section */
+      .footer {
+        padding: 10px 0;
+        background-color: #000000;
+        color: #FFFFFF;
+        text-align: center;
+      }
+      
+      .footer-links li {
+        margin: 0 5px;
+        display: inline-block;
+      }
+      
+      .footer-info p {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      
+      .footer-social a {
+        font-size: 16px;
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+      
+      .footer-links a {
+        font-size: 12px;
+        color: #fff;
+        font-family: 'Gotham Bold';
+        text-decoration: none;
+      }
+
+    
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+  .navbar {
+      position: fixed;
+      background-color: transparent;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100vw;
+      padding: 10px 0px;
+  }
+  
+  .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: 89vw;
+      cursor: pointer;
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 46px;
+      right: 0px;
+      width: 30%;
+      height: 90px;
+      background-color: #17171700;
+      text-align: center;
+      z-index: 1;
+  }
+
+  menu, li {
+      margin-top: 7px;
+  }
+
+  menu, a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+     
+  }
+
+  .logo2 {
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #fff;
+    padding-right: 10px;
+    margin-left: 30px;
+    display: none;
+    
+  }
+
+  .shop {
+    padding-right: 1000px;
+  }
+
+
+  .bar {
+      width: 25px;
+      height: 2px;
+      background-color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+      margin: 3px 0;
+      transition: 0.4s;
+  }
+
+  .menu.active {
+      display: flex;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-8px, 3.5px);
+      width: 17px;
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-8px, -3.5px);
+      width: 17px;
+  }
+
+  /*Hero Section*/
+
+  .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: url(images/wallpaper.png);
+      background-position: center;
+      background-size: cover;
+      text-align: center;
+      margin: auto;
+      margin-top: 0px;
+      width: 100%;
+      height: 550px;
+  }
+
+  .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 53px;
+      position: relative;
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+      margin-top: 130px;
+      margin-bottom: 12px;
+  }
+
+
+  .title {
+      font-size: 22px;
+      font-family: 'Cormorant Garamond', serif;
+      margin-top: 0px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #fff;
+      font-weight:400;
+      text-shadow: 0px 0px 10px #fff;
+      line-height: 0;
+  }
+
+  .title2 {
+      font-size: 12px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: lowercase;
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+      margin-bottom: 20px;
+  }
+
+  a.cta-button {
+      display: flex;
+      background-color: transparent;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      letter-spacing: 2px;
+      font-size: 14px !important;
+      border: 1px solid #ffffff86;
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      border-radius: 5px;
+      justify-content: center;
+      justify-self: center;
+      width: 70px;
+      position: relative;
+      margin: auto;
+      margin-top: 0px;
+  }
+  
+  /*Ventures Section*/
+
+  /* Style for the header */
+
+.ventures {
+  text-align: center;
+}
+
+.tech {
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+/* Style for the content section */
+.content {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.row {
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 75vh;
+background-color: #000000a1;
+padding: 20px 50px;
+transition: transform 0.3s ease, box-shadow 0.3 ease; /* Add a transition for smooth hover effect */
+}
+
+/* Animation for hover-like effect */
+@keyframes hoverEffect {
+0% {
+  transform: scale(1);
+  box-shadow: none;
+}
+50% {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(245, 245, 245, 0.5);
+}
+100% {
+  transform: scale(1);
+  box-shadow: none;
+}
+}
+
+/* Apply the animation to the rows */
+.row:hover, .row-auto-hover {
+animation: hoverEffect 5s infinite alternate; /* Adjust the duration as needed */
+}
+
+
+
+
+/* Style for the left box */
+.left-box {
+flex: 1;
+background-color: #000000;
+/* Add styles as needed for your left box */
+}
+
+/* Style for the right box */
+.right-box {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/6.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box2 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/7.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box3 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/5.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box4 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/10.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box5 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/11.png);
+  background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box6 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/12.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box7 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/9.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box p {
+font-size: 18px;
+}
+
+/* Style for the call to action button */
+.cta-button {
+margin-top: 70px;
+}
+
+.button {
+color: #fff;
+border: 1px solid #fff;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+
+font-weight: bold;
+}
+
+.button:hover {
+background-color: #0056b3;
+}
+    
+
+    
+    /* Footer Section */
+    .footer {
+      padding: 10px 0;
+      background-color: #000000;
+      color: #FFFFFF;
+      text-align: center;
+    }
+    
+    .footer-links li {
+      margin: 0 5px;
+      display: inline-block;
+    }
+    
+    .footer-info p {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    
+    .footer-social a {
+      font-size: 16px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    
+    .footer-links a {
+      font-size: 12px;
+      color: #fff;
+      font-family: 'Gotham Bold';
+      text-decoration: none;
+    }
+
+  
+}
+
+
+@media (min-width: 1200px) {
+
+  .navbar {
+      position: fixed;
+      background-color: transparent;
+      color: #fff;
+      width: 100%;
+      padding: 10px 0px;      
+  }
+  
+  .menu-toggle {
+      display: none;
+  }
+
+  .navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo2 {
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #fff;
+    padding-right: 10px;
+    margin-left: 30px;
+    
+  }
+
+  .shop {
+    padding-right: 600px;
+    margin-left: 20px;
+  }
+
+  .menu {
+      display: flex;
+      justify-content: space-evenly;
+      align-content: center;
+      width: 100%;
+      background-color: #17171700;
+      text-align: center;
+      z-index: 1;
+      margin-left: 90px;
+    
+  }
+
+  menu, li {
+      margin-top: 7px;
+  }
+
+  menu, a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+     
+  }
+
+
+  
+
+  /*Hero Section*/
+
+  .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: url(images/wallpaper.png);
+      background-position: center;
+      background-size: cover;
+      text-align: center;
+      margin: auto;
+      margin-top: 0px;
+      width: 100%;
+      height: 600px;
+  }
+
+  .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 53px;
+      position: relative;
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+      margin-top: 170px;
+      margin-bottom: 12px;
+  }
+
+
+  .title {
+      font-size: 22px;
+      font-family: 'Cormorant Garamond', serif;
+      margin-top: 0px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #fff;
+      font-weight:400;
+      text-shadow: 0px 0px 10px #fff;
+      line-height: 0;
+  }
+
+  .title2 {
+      font-size: 12px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: lowercase;
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+      margin-bottom: 20px;
+  }
+
+  a.cta-button {
+      display: flex;
+      background-color: transparent;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      letter-spacing: 2px;
+      font-size: 14px !important;
+      border: 1px solid #ffffff86;
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      border-radius: 5px;
+      justify-content: center;
+      justify-self: center;
+      width: 70px;
+      position: relative;
+      margin: auto;
+      margin-top: 0px;
+  }
+
+  a.cta-button:hover {
+    color: #000;
+    font-weight: bolder;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #fff;
+    transition: 550ms ease-in-out;
+  }
+  
+  /*Ventures Section*/
+
+  /* Style for the header */
+
+.ventures {
+  text-align: center;
+}
+
+.tech {
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+/* Style for the content section */
+.content {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.row {
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 70vh;
+background-color: #000000a1;
+padding: 20px 50px;
+transition: transform 0.3s ease, box-shadow 0.3 ease; /* Add a transition for smooth hover effect */
+}
+
+/* Animation for hover-like effect */
+@keyframes hoverEffect {
+0% {
+  transform: scale(1);
+  box-shadow: none;
+}
+50% {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(245, 245, 245, 0.5);
+}
+100% {
+  transform: scale(1);
+  box-shadow: none;
+}
+}
+
+/* Apply the animation to the rows */
+.row:hover, .row-auto-hover {
+animation: hoverEffect 5s infinite alternate; /* Adjust the duration as needed */
+}
+
+
+
+
+/* Style for the left box */
+.left-box {
+flex: 1;
+background-color: #000000;
+/* Add styles as needed for your left box */
+}
+
+/* Style for the right box */
+.right-box {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/6.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box2 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/7.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box3 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/5.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box4 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/10.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box5 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/11.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box6 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/12.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box7 {
+flex: 1;
+padding-bottom: 50px;
+text-align: center;
+background-image: url(images/W/9.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.right-box p {
+font-size: 18px;
+
+}
+
+/* Style for the call to action button */
+.cta-button {
+margin-top: 70px;
+}
+
+.button {
+color: #fff;
+border: 1px solid #fff;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+
+font-weight: bold;
+}
+
+.button:hover {
+background-color: #fff;
+box-shadow: 0px 0px 10px #fff;
+color: black;
+font-weight: bolder;
+transition: 150ms ease-in;
+}
+    
+
+    
+    /* Footer Section */
+    .footer {
+      padding: 10px 0;
+      background-color: #000000;
+      color: #FFFFFF;
+      text-align: center;
+    }
+    
+    .footer-links li {
+      margin: 0 5px;
+      display: inline-block;
+    }
+    
+    .footer-info p {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    
+    .footer-social a {
+      font-size: 16px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    
+    .footer-links a {
+      font-size: 12px;
+      color: #fff;
+      font-family: 'Gotham Bold';
+      text-decoration: none;
+    }
+
+  
+}
