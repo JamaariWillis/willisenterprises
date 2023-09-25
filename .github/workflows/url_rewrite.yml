@@ -34,4 +34,4 @@ jobs:
           git config --local user.name "JamaariWillis"
           git add index.html
           git commit -m "Add URL rewrite"
-          git push https://${{ secrets.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 }}@github.com/JamaariWillis/willisenterprises.git
+          git push https://${{ secrets.GH_PAT }}@github.com/JamaariWillis/willisenterprises.git
