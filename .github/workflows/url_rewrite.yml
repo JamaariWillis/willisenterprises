@@ -25,13 +25,13 @@ jobs:
           permalink: /home
           redirect_from:
             - /
-          ---' > index.html
+          ---' > main/index.html
         working-directory: ./main # Adjust this path if necessary
 
       - name: Deploy
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
+          git config --local user.email "jamaari1w@gmail.com"
+          git config --local user.name "JamaariWillis"
+          git add main/index.html
           git commit -m "Add URL rewrite"
           git push
