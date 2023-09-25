@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  ACTIONS_RUNNER_DEBUG: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,5 +39,10 @@ jobs:
           git commit -m "Add URL rewrite"
           git push https://github.com/JamaariWillis/willisenterprises.git
 
+      - name: Validate PAT
+        run: |
+          gh auth login --with-token <<< "${{ secrets.GH_PAT }}"
+          gh repo list
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+
