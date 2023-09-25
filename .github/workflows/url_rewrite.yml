@@ -25,7 +25,7 @@ jobs:
           permalink: /home
           redirect_from:
             - /
-          ---' > /main/index.html
+          ---' > JamaariWillis/willisenterprises/blob/main/index.html
           
       - name: Deploy
         run: |
