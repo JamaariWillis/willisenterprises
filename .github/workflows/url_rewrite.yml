@@ -25,7 +25,7 @@ jobs:
           permalink: /home
           redirect_from:
             - /
-          ---' > JamaariWillis/willisenterprises/blob/main/index.html
+          ---' > https://github.com/JamaariWillis/willisenterprises/blob/main/index.html
           
       - name: Deploy
         run: |
