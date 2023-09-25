@@ -25,7 +25,7 @@ jobs:
           permalink: /home
           redirect_from:
             - /
-          ---' > main/index.html
+          ---' > willisenterprises/index.html
           working-directory: ./main
           
       - name: Deploy
