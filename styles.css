@@ -1,1036 +1,485 @@
-body, ul {
-    margin: 0;
-    padding: 0;
-    background-color: #010103;
-    list-style-type: none;
-    color: #fff;
-    text-shadow: 0px 0px 4px #fff;
-    font-family: 'Cormorant Garamond', serif;
+/* styles.css */
+/*fonts*/
+
+@font-face {
+    font-family: 'Horizon';
+    src: url(fonts/horizon.otf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); 
+@font-face {
+    font-family: 'Gotham';
+    src: url(fonts/Gotham/Gotham-light.otf);
+}
 
-@media (max-width: 768px) {
+/**/
 
-    .navbar {
-        position: fixed;
-        background-color: transparent;
-        color: #fff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100vw;
-        padding: 10px 0px;
-    }
-    
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        left: 89vw;
-        cursor: pointer;
-    }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+}
 
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 46px;
-        right: 0px;
-        width: 30%;
-        height: 90px;
-        background-color: #17171700;
-        text-align: center;
-        z-index: 1;
-    }
+/**/
+body {
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: #e9e9e9;
+}
 
-    menu, li {
-        margin-top: 7px;
-    }
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+}
 
-    menu, a {
-        color: #fff;
-        text-decoration: none;
-        font-family: 'Cormorant Garamond', serif;
-       
-    }
+.top-bar {
 
-    .logo2 {
-      font-size: 30px;
-      text-shadow: 0px 0px 10px #fff;
-      padding-right: 10px;
-      margin-left: 30px;
-      display: none;
-      
-    }
-  
-    .shop {
-      padding-right: 700px;
-    }
-
-
-    .bar {
-        width: 25px;
-        height: 2px;
-        background-color: #fff;
-        text-shadow: 0px 0px 10px #fff;
-        margin: 3px 0;
-        transition: 0.4s;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu-toggle.active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-8px, 3.5px);
-        width: 17px;
-    }
-
-    .menu-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-8px, -3.5px);
-        width: 17px;
-    }
-
-    /*Hero Section*/
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-image: url(images/wallpaper.png);
-        background-position: center;
-        background-size: cover;
-        text-align: center;
-        margin: auto;
-        margin-top: 0px;
-        width: 100%;
-        height: 450px;
-    }
-
-    .logo {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 53px;
-        position: relative;
-        color: #fff;
-        text-shadow: 0px 0px 10px #fff;
-        margin-top: 50px;
-        margin-bottom: 12px;
-    }
-
-
-    .title {
-        font-size: 22px;
-        font-family: 'Cormorant Garamond', serif;
-        margin-top: 0px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        color: #fff;
-        font-weight:400;
-        text-shadow: 0px 0px 10px #fff;
-        line-height: 0;
-    }
-
-    .title2 {
-        font-size: 12px;
-        font-family: 'Cormorant Garamond', serif;
-        font-weight: 400;
-        letter-spacing: 2px;
-        text-transform: lowercase;
-        color: #fff;
-        text-shadow: 0px 0px 10px #fff;
-        margin-bottom: 20px;
-    }
-
-    a.cta-button {
-        display: flex;
-        background-color: transparent;
-        font-family: 'Cormorant Garamond', serif;
-        font-weight: 400;
-        letter-spacing: 2px;
-        font-size: 14px !important;
-        border: 1px solid #ffffff86;
-        color: #fff;
-        text-shadow: 0px 0px 10px #fff;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 20px;
-        border-radius: 5px;
-        justify-content: center;
-        justify-self: center;
-        width: 70px;
-        position: relative;
-        margin: auto;
-        margin-top: 0px;
-    }
-    
-    /*Ventures Section*/
-
-    /* Style for the header */
-
-  .ventures {
+    background: #0e0d0d;
+    color: #f7f7f7;
     text-align: center;
-  }
-
-  .tech {
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* Style for the content section */
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50vh;
-  background-color: #000000a1;
-  padding: 20px 50px;
-  transition: transform 0.3s ease, box-shadow 0.3 ease; /* Add a transition for smooth hover effect */
-}
-
-/* Animation for hover-like effect */
-@keyframes hoverEffect {
-  0% {
-    transform: scale(1);
-    box-shadow: none;
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(245, 245, 245, 0.5);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: none;
-  }
-}
-
-/* Apply the animation to the rows */
-.row:hover, .row-auto-hover {
-  animation: hoverEffect 5s infinite alternate; /* Adjust the duration as needed */
-}
-
-
-
-
-/* Style for the left box */
-.left-box {
-  flex: 1;
-  background-color: #000000;
-  /* Add styles as needed for your left box */
-}
-
-/* Style for the right box */
-.right-box {
-  flex: 1;
-  padding-bottom: 50px;
-  text-align: center;
-  background-image: url(images/W/6.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.right-box2 {
-  flex: 1;
-  padding-bottom: 50px;
-  text-align: center;
-  background-image: url(images/W/7.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.right-box3 {
-  flex: 1;
-  padding-bottom: 50px;
-  text-align: center;
-  background-image: url(images/W/5.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.right-box4 {
-  flex: 1;
-  padding-bottom: 50px;
-  text-align: center;
-  background-image: url(images/W/10.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.right-box5 {
-  flex: 1;
-  padding-bottom: 50px;
-  text-align: center;
-  background-image: url(images/W/11.png);
-    background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.right-box6 {
-  flex: 1;
-  padding-bottom: 50px;
-  text-align: center;
-  background-image: url(images/W/12.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.right-box7 {
-  flex: 1;
-  padding-bottom: 50px;
-  text-align: center;
-  background-image: url(images/W/9.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.right-box p {
-  font-size: 18px;
-}
-
-/* Style for the call to action button */
-.cta-button {
-  margin-top: 70px;
-}
-
-.button {
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-
-  font-weight: bold;
-}
-
-.button:hover {
-  background-color: #0056b3;
-}
-      
- 
-      
-      /* Footer Section */
-      .footer {
-        padding: 10px 0;
-        background-color: #000000;
-        color: #FFFFFF;
-        text-align: center;
-      }
-      
-      .footer-links li {
-        margin: 0 5px;
-        display: inline-block;
-      }
-      
-      .footer-info p {
-        font-size: 12px;
-        margin-bottom: 10px;
-      }
-      
-      .footer-social a {
-        font-size: 16px;
-        color: #FFFFFF;
-        text-decoration: none;
-      }
-      
-      .footer-links a {
-        font-size: 12px;
-        color: #fff;
-        font-family: 'Gotham Bold';
-        text-decoration: none;
-      }
-
-    
-}
-
-@media (min-width: 769px) and (max-width: 1199px) {
-
-  .navbar {
-      position: fixed;
-      background-color: transparent;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100vw;
-      padding: 10px 0px;
-  }
-  
-  .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      left: 89vw;
-      cursor: pointer;
-  }
-
-  .menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 46px;
-      right: 0px;
-      width: 30%;
-      height: 90px;
-      background-color: #17171700;
-      text-align: center;
-      z-index: 1;
-  }
-
-  menu, li {
-      margin-top: 7px;
-  }
-
-  menu, a {
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Cormorant Garamond', serif;
-     
-  }
-
-  .logo2 {
-    font-size: 30px;
-    text-shadow: 0px 0px 10px #fff;
-    padding-right: 10px;
-    margin-left: 30px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-family: 'Libre Baskerville';
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
     display: none;
     
-  }
-
-  .shop {
-    padding-right: 1000px;
-  }
-
-
-  .bar {
-      width: 25px;
-      height: 2px;
-      background-color: #fff;
-      text-shadow: 0px 0px 10px #fff;
-      margin: 3px 0;
-      transition: 0.4s;
-  }
-
-  .menu.active {
-      display: flex;
-  }
-
-  .menu-toggle.active .bar:nth-child(1) {
-      transform: rotate(-45deg) translate(-8px, 3.5px);
-      width: 17px;
-  }
-
-  .menu-toggle.active .bar:nth-child(2) {
-      opacity: 0;
-  }
-
-  .menu-toggle.active .bar:nth-child(3) {
-      transform: rotate(45deg) translate(-8px, -3.5px);
-      width: 17px;
-  }
-
-  /*Hero Section*/
-
-  .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-image: url(images/wallpaper.png);
-      background-position: center;
-      background-size: cover;
-      text-align: center;
-      margin: auto;
-      margin-top: 0px;
-      width: 100%;
-      height: 550px;
-  }
-
-  .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 53px;
-      position: relative;
-      color: #fff;
-      text-shadow: 0px 0px 10px #fff;
-      margin-top: 130px;
-      margin-bottom: 12px;
-  }
-
-
-  .title {
-      font-size: 22px;
-      font-family: 'Cormorant Garamond', serif;
-      margin-top: 0px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: #fff;
-      font-weight:400;
-      text-shadow: 0px 0px 10px #fff;
-      line-height: 0;
-  }
-
-  .title2 {
-      font-size: 12px;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      letter-spacing: 2px;
-      text-transform: lowercase;
-      color: #fff;
-      text-shadow: 0px 0px 10px #fff;
-      margin-bottom: 20px;
-  }
-
-  a.cta-button {
-      display: flex;
-      background-color: transparent;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      letter-spacing: 2px;
-      font-size: 14px !important;
-      border: 1px solid #ffffff86;
-      color: #fff;
-      text-shadow: 0px 0px 10px #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-size: 20px;
-      border-radius: 5px;
-      justify-content: center;
-      justify-self: center;
-      width: 70px;
-      position: relative;
-      margin: auto;
-      margin-top: 0px;
-  }
-  
-  /*Ventures Section*/
-
-  /* Style for the header */
-
-.ventures {
-  text-align: center;
 }
 
-.tech {
-color: #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
+.bottom-bar {
+    background: #2e2e2e21;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Style for the content section */
-.content {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+.bottom-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.row {
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 75vh;
-background-color: #000000a1;
-padding: 20px 50px;
-transition: transform 0.3s ease, box-shadow 0.3 ease; /* Add a transition for smooth hover effect */
+.bottom-bar li {
+    display: inline;
+    margin: 0 15px;
 }
 
-/* Animation for hover-like effect */
-@keyframes hoverEffect {
-0% {
-  transform: scale(1);
-  box-shadow: none;
-}
-50% {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(245, 245, 245, 0.5);
-}
-100% {
-  transform: scale(1);
-  box-shadow: none;
-}
+.bottom-bar a {
+    color: #fff;
+    text-decoration: none;
 }
 
-/* Apply the animation to the rows */
-.row:hover, .row-auto-hover {
-animation: hoverEffect 5s infinite alternate; /* Adjust the duration as needed */
-}
-
-
-
-
-/* Style for the left box */
-.left-box {
-flex: 1;
-background-color: #000000;
-/* Add styles as needed for your left box */
-}
-
-/* Style for the right box */
-.right-box {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/6.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box2 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/7.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box3 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/5.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box4 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/10.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box5 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/11.png);
-  background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box6 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/12.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box7 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/9.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box p {
-font-size: 18px;
-}
-
-/* Style for the call to action button */
-.cta-button {
-margin-top: 70px;
-}
-
-.button {
-color: #fff;
-border: 1px solid #fff;
-padding: 10px 20px;
-text-decoration: none;
-border-radius: 5px;
-
-font-weight: bold;
-}
-
-.button:hover {
-background-color: #0056b3;
-}
+.intro-section {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    background-image: url(test_image_30.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     
+    
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.intro-content h1 {
+    margin: 0;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.explore {
+    background-color: #111111;
+    color: #fff;
+}
+
+.subsidiaries-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    margin: 10px;
+    width: 48vw;
+    height: 60vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.indust {
+    background-color: #000;
+    color: #fff;
+}
+
+.indust h2 {
+    font-family: 'Montserrat';
+    letter-spacing: 6px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.indust .btn {
+    font-family: 'Montserrat';
+}
+
+.indust .learn-more {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.tech h2 {
+    text-transform: uppercase;
+    font-family: 'Horizon';
+    letter-spacing: 5px;
+    font-size: 2.2em;
+    line-height: 0;
+}
+
+.tech h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Gotham';
+    font-size: .9em;
+    
+}
+
+.tech .btn {
+    font-family: 'Nunito';
+    letter-spacing: 1.2px;
+    
+}
+
+
+.tech p {
+    font-family: 'Nunito';
+}
+
+.tech .learn-more {
+    background-color: #f5f5f5;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: bold;
+}
+
+.tech .view-site {
+    color: #f5f5f5;
+    background-color: #000;
+}
+
+.found h2 {
+    font-family: 'Cormorant Garamond';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 0;
+    color: #08023d;
+}
+
+.found h3 {
+    font-family: 'Playfair Display';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    line-height: 0;
+    color: #08023d;
+}
+
+.found .line {
+    width: 24%;
+    height: .5%;
+    background-color: #08023d;
 
     
-    /* Footer Section */
-    .footer {
-      padding: 10px 0;
-      background-color: #000000;
-      color: #FFFFFF;
-      text-align: center;
-    }
-    
-    .footer-links li {
-      margin: 0 5px;
-      display: inline-block;
-    }
-    
-    .footer-info p {
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-    
-    .footer-social a {
-      font-size: 16px;
-      color: #FFFFFF;
-      text-decoration: none;
-    }
-    
-    .footer-links a {
-      font-size: 12px;
-      color: #fff;
-      font-family: 'Gotham Bold';
-      text-decoration: none;
-    }
+}
 
-  
+.found .learn-more {
+    background-color: #f5f5f5;
+    border: 1px solid #08023d;
+
+}
+
+.found .btn {
+    font-family: 'Playfair Display';
+    letter-spacing: 1.2px;
+}
+
+.found .view-site {
+    color: #f5f5f5;
+    background-color: #08023d;
 }
 
 
-@media (min-width: 1200px) {
 
-  .navbar {
-      position: fixed;
-      background-color: transparent;
-      color: #fff;
-      width: 100%;
-      padding: 10px 0px;      
-  }
-  
-  .menu-toggle {
-      display: none;
+.dream h2 {
+    font-family: 'Montserrat';
+    color: #f5f5f5;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 1em;
+
+    
+}
+
+.dream .view-site {
+    background-color: #f7ca5a;
+    font-family: 'Montserrat';
+    color: #000;
+}
+
+.dream .learn-more {
+    background-color: #00000038;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    
+    font-family: 'Montserrat';
+}
+
+
+
+.overlay {
+    position: relative;
+    background-color: #000000ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
   }
 
-  .navbar-content {
+  .overlay-items {
+    text-align: center;
+    font-family: 'Playfair Display';
+  }
+
+
+  .call-button {
+    background-color: #f1c145 !important;
+    position: relative;
+    top: 0;
+  }
+
+  .call-button:hover {
+    background-color: #e9e9e9 !important;
+    transition: 1000ms;
+  }
+
+  .dream {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(background1.jpg);
+    background-position-x: 30%;
+    background-size: cover;
+  }
+
+  /*Nav Bar */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    background-color: #000000;
+    width: 100%;
+    padding: 10px 0px
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+}
+
+
+.about-section {
+    text-align: left; 
+    padding: 0px 15px;
+    padding-bottom: 40px;
+}
+
+.about-box {
+    background: #f5f5f5; 
+    color: #333;
+    padding: 25px 0px 0px 25px;
+    height: 50vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
+}
+
+.get-to-know {
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+    font-family: 'Montserrat';
+    
+}
+
+.space {
+    margin-left: 20px;
+}
+
+.gtk-h1 {
+    font-size: 1.9em;
+    font-weight: 300;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+.mission-statement {
+    font-size: 1.2em;
+    line-height: 2;
+}
+
+.about-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Montserrat';
+    
+}
+
+.about-buttons .about {
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+.about-buttons .impact {
+    font-family: 'Montserrat';
+}
+
+.slide-section {
+    margin-top: 40px;
+    margin-bottom: 55px;
+}
+
+.carousel-container {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .logo2 {
-    font-size: 30px;
-    text-shadow: 0px 0px 10px #fff;
-    padding-right: 10px;
-    margin-left: 30px;
-    
-  }
-
-  .shop {
-    padding-right: 600px;
-    margin-left: 20px;
-  }
-
-  .menu {
-      display: flex;
-      justify-content: space-evenly;
-      align-content: center;
-      width: 100%;
-      background-color: #17171700;
-      text-align: center;
-      z-index: 1;
-      margin-left: 90px;
-    
-  }
-
-  menu, li {
-      margin-top: 7px;
-  }
-
-  menu, a {
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Cormorant Garamond', serif;
-     
-  }
-
-
-  
-
-  /*Hero Section*/
-
-  .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-image: url(images/wallpaper.png);
-      background-position: center;
-      background-size: cover;
-      text-align: center;
-      margin: auto;
-      margin-top: 0px;
-      width: 100%;
-      height: 600px;
-  }
-
-  .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 53px;
-      position: relative;
-      color: #fff;
-      text-shadow: 0px 0px 10px #fff;
-      margin-top: 170px;
-      margin-bottom: 12px;
-  }
-
-
-  .title {
-      font-size: 22px;
-      font-family: 'Cormorant Garamond', serif;
-      margin-top: 0px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: #fff;
-      font-weight:400;
-      text-shadow: 0px 0px 10px #fff;
-      line-height: 0;
-  }
-
-  .title2 {
-      font-size: 12px;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      letter-spacing: 2px;
-      text-transform: lowercase;
-      color: #fff;
-      text-shadow: 0px 0px 10px #fff;
-      margin-bottom: 20px;
-  }
-
-  a.cta-button {
-      display: flex;
-      background-color: transparent;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      letter-spacing: 2px;
-      font-size: 14px !important;
-      border: 1px solid #ffffff86;
-      color: #fff;
-      text-shadow: 0px 0px 10px #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-size: 20px;
-      border-radius: 5px;
-      justify-content: center;
-      justify-self: center;
-      width: 70px;
-      position: relative;
-      margin: auto;
-      margin-top: 0px;
-  }
-
-  a.cta-button:hover {
-    color: #000;
-    font-weight: bolder;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px #fff;
-    transition: 550ms ease-in-out;
-  }
-  
-  /*Ventures Section*/
-
-  /* Style for the header */
-
-.ventures {
-  text-align: center;
 }
 
-.tech {
-color: #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
+.carousel {
+    display: flex;
+    align-items: center;
+    width: calc(100% * 3); /* Adjust to show three slides at once */
+    animation: scroll 30s linear infinite; /* Adjust duration as needed */
 }
 
-/* Style for the content section */
-.content {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+.slide {
+    width: 70vw;
+    height: 60vh;
+    flex: 0 0 auto;
+    background: #ccc;
+    margin: 0 1vw; /* Adds a gap between slides */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    color: #333;
+    box-sizing: border-box;
+    padding-left: 30px;
 }
 
-.row {
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 70vh;
-background-color: #000000a1;
-padding: 20px 50px;
-transition: transform 0.3s ease, box-shadow 0.3 ease; /* Add a transition for smooth hover effect */
+.slide h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px; /* Add margin to separate h3 from the button and paragraph */
+    position: absolute;
+    width: 100%;
 }
 
-/* Animation for hover-like effect */
-@keyframes hoverEffect {
-0% {
-  transform: scale(1);
-  box-shadow: none;
-}
-50% {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(245, 245, 245, 0.5);
-}
-100% {
-  transform: scale(1);
-  box-shadow: none;
-}
+.button-paragraph {
+    display: flex;
+    align-items: center;
+    justify-items: end;
+    margin-top: auto;
+    padding-bottom: 20px;
 }
 
-/* Apply the animation to the rows */
-.row:hover, .row-auto-hover {
-animation: hoverEffect 5s infinite alternate; /* Adjust the duration as needed */
+.button-paragraph .btn {
+    margin-right: 20px; /* Adds space between the button and the paragraph */
 }
 
-
-
-
-/* Style for the left box */
-.left-box {
-flex: 1;
-background-color: #000000;
-/* Add styles as needed for your left box */
+.button-paragraph p {
+    font-size: 1.5rem;
+    margin: 0; /* Remove default margin from the paragraph */
 }
 
-/* Style for the right box */
-.right-box {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/6.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box2 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/7.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box3 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/5.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box4 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/10.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box5 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/11.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box6 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/12.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box7 {
-flex: 1;
-padding-bottom: 50px;
-text-align: center;
-background-image: url(images/W/9.png);
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.right-box p {
-font-size: 18px;
-
-}
-
-/* Style for the call to action button */
-.cta-button {
-margin-top: 70px;
-}
-
-.button {
-color: #fff;
-border: 1px solid #fff;
-padding: 10px 20px;
-text-decoration: none;
-border-radius: 5px;
-
-font-weight: bold;
-}
-
-.button:hover {
-background-color: #fff;
-box-shadow: 0px 0px 10px #fff;
-color: black;
-font-weight: bolder;
-transition: 150ms ease-in;
-}
-    
-
-    
-    /* Footer Section */
-    .footer {
-      padding: 10px 0;
-      background-color: #000000;
-      color: #FFFFFF;
-      text-align: center;
+/* Keyframe animation for scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
-    
-    .footer-links li {
-      margin: 0 5px;
-      display: inline-block;
+    100% {
+        transform: translateX(-70%); /* Adjust based on the number of slides */
     }
-    
-    .footer-info p {
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-    
-    .footer-social a {
-      font-size: 16px;
-      color: #FFFFFF;
-      text-decoration: none;
-    }
-    
-    .footer-links a {
-      font-size: 12px;
-      color: #fff;
-      font-family: 'Gotham Bold';
-      text-decoration: none;
-    }
+}
 
-  
+
+
+.careers-section, .contact-section {
+    height: 70vh; /* Adjusts the height to take up a large percentage of the viewport height */
+    display: flex; /* Uses flexbox for centering */
+    flex-direction: column; /* Centers content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 50px 20px; /* Maintains the padding */
+    text-align: center; /* Centers text */
+    box-sizing: border-box; /* Ensures padding is included in the height calculation */
+}
+
+
+
+.contact-section {
+    background-image: url(test_image_30.png);
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#e7e7e7;
 }
