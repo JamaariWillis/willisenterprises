@@ -69,10 +69,10 @@ text-decoration: none;
 }
 
 .intro-section {
+width: 100vw;
 background: #000;
 color: #fff;
 text-align: center;
-padding: 100px 0;
 display: flex;
 justify-content: center;
 height: 100vh;
