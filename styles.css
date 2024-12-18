@@ -281,6 +281,7 @@ height: 100vh;
 .overlay-items {
 text-align: center;
 font-family: 'Playfair Display';
+width: 100%;
 }
 
 .call-button {
